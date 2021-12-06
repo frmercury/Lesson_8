@@ -24,7 +24,7 @@ public class Login {
                     System.out.println("3. Armstrong task");
                     System.out.println("4. Fibonacci task");
                     System.out.println("5. Replace task");
-                    System.out.print("Please enter number of the listed task above: ");
+                    System.out.print("Please enter number of the listed task above or choose \"0\" to quit: ");
 
                     while (!scanner.hasNextInt()) {
 
@@ -33,6 +33,10 @@ public class Login {
                             System.out.print("Please enter correct number: ");
                         }
                         number = scanner.nextInt();
+                        if (number == 0) {
+                                System.out.println("Program has been terminated");
+                                System.exit(0);
+                          }
 
                 } while (number <= 0 || number > 5) ;
                 return number;
