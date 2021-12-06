@@ -25,4 +25,3 @@ public class Replace {
             System.out.println("\nResult string: " + str1 + "\n");
         }
 }
-
