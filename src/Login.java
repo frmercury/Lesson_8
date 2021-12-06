@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Login {
 
+    // Login: login
+    // Password: password
+
     public static String getLogin() {
         System.out.printf("Login: ");
         Scanner scanner = new Scanner(System.in);
@@ -24,7 +27,7 @@ public class Login {
                     System.out.println("3. Armstrong task");
                     System.out.println("4. Fibonacci task");
                     System.out.println("5. Replace task");
-                    System.out.print("Please enter number of the listed task above: ");
+                    System.out.print("Please enter number of the listed task above or press \"0\" to quit the program: ");
 
                     while (!scanner.hasNextInt()) {
 
@@ -33,14 +36,18 @@ public class Login {
                             System.out.print("Please enter correct number: ");
                         }
                         number = scanner.nextInt();
+                        if (number == 0) {
+                            System.out.println("Program has been terminated");
+                            System.exit(0);
+                        }
 
-                } while (number <= 0 || number > 5) ;
+                } while (number < 0 || number > 5) ;
                 return number;
     }
 
     public static void credentialsCheck (String login, String password){
-        String userLogin = "l";
-        String userPassword = "p";
+        String userLogin = "login";
+        String userPassword = "password";
 
         if (login.equals(userLogin) && password.equals(userPassword)) {
             int numberOfTries = 3;

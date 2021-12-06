@@ -16,7 +16,8 @@ public class Fibonacci {
 
     public void fib(long n) {
         long count = n, num1 = 0, num2 = 1;
-        System.out.print("\nFibonacci Series of "+count+" numbers: ");
+
+        System.out.print("\nFibonacci Series of "+count+" numbers: \n");
 
         long i=1;
         while(i<=count) {
